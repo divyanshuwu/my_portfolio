@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Divyansh // VIDI-VICI — 3rd-Year B.Tech IT Student (Class of 2028) & Systems/Backend Engineer specializing in Java, Python, FastAPI, SQL, REST APIs, and modern JavaScript." />
+  <meta name="keywords" content="Portfolio, Divyansh, VIDI-VICI, FastAPI, Python, Java, SQL, REST API, JavaScript, B.Tech IT, Backend Developer, Cyberpunk, Futuristic UI" />
+  <meta name="author" content="Divyansh" />
+  <title>Divyansh // NEXUS-OS Portfolio — B.Tech IT & Systems Architect</title>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./css/design-system.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+</head>
+<body>
+
+  <!-- Custom Cyber Reticle Cursor (Desktop) -->
+  <div class="cyber-cursor-dot"></div>
+  <div class="cyber-cursor-ring"></div>
+
+  <!-- Ambient Particle & Cyber Grid Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+  <div class="cyber-vignette"></div>
+
+  <div class="app-viewport">
+
+    <!-- =========================================================================
+         HUD TOP NAVIGATION BAR
+         ========================================================================= -->
+    <header class="hud-navbar">
+      <div class="container hud-container">
+        <a href="#hero" class="hud-brand" id="brand-logo">
+          <div class="brand-icon-box">
+            <i data-lucide="cpu"></i>
+          </div>
+          <div>
+            <span class="brand-title">DIVYANSH<span style="color: var(--neon-cyan)">.OS</span></span>
+            <span class="brand-sub">VIDI-VICI // @divyanshuwu</span>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="hud-nav-links" id="hud-nav-links">
+            <li class="hud-nav-item"><a href="#hero" class="active"><i data-lucide="terminal-square"></i> Core</a></li>
+            <li class="hud-nav-item"><a href="#skills"><i data-lucide="cpu"></i> Skills Matrix</a></li>
+            <li class="hud-nav-item"><a href="#contact"><i data-lucide="radio"></i> Uplink</a></li>
+          </ul>
+        </nav>
+
+        <div class="hud-controls">
+          <div class="telemetry-pill">
+            <div class="telemetry-item">
+              <span class="status-beacon"></span>
+              <span id="telemetry-clock">--:--:-- UTC</span>
+            </div>
+            <div class="telemetry-item">
+              <span>CPU:</span>
+              <span class="telemetry-val" id="telemetry-cpu">14.2%</span>
+            </div>
+            <div class="telemetry-item">
+              <span>PING:</span>
+              <span class="telemetry-val" id="telemetry-ping">19ms</span>
+            </div>
+          </div>
+
+          <button class="hud-audio-btn" id="hud-audio-toggle" title="Toggle Futuristic Audio SFX" aria-label="Toggle Audio">
+            <i data-lucide="volume-x"></i>
+          </button>
+
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================================
+         HERO / IDENTITY CORE SECTION
+         ========================================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-badge-beacon">
+              <span class="status-beacon"></span>
+              <span>B.TECH IT 3RD YEAR // CLASS OF 2028 // OPEN TO SDE INTERNSHIPS</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Divyansh</span>
+            </h1>
+
+            <div class="hero-subtitle-box">
+              <span>&gt;</span>
+              <span id="hero-typing-target"></span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <p class="hero-desc">
+              Engineering high-performance <strong>FastAPI microservices</strong>, robust <strong>Java systems</strong>, and structured <strong>SQL databases</strong>. 3rd-year B.Tech IT undergraduate eager to solve complex engineering challenges.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#skills" class="btn btn-primary">
+                <i data-lucide="cpu"></i> Explore Skills Matrix
+              </a>
+              <a href="https://github.com/divyanshuwu" target="_blank" class="btn btn-secondary">
+                <i data-lucide="github"></i> GitHub @divyanshuwu
+              </a>
+              <button onclick="window.print()" class="btn btn-outline" id="btn-download-resume">
+                <i data-lucide="file-text"></i> Matrix Resume
+              </button>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="stat-card">
+                <div class="stat-val">7.0</div>
+                <div class="stat-label">B.Tech CGPA</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-val">0</div>
+                <div class="stat-label">LeetCode Solved</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-val">8+</div>
+                <div class="stat-label">Core Tech Skills</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-val">99.9%</div>
+                <div class="stat-label">System Uptime</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-hologram-frame">
+              <div class="avatar-rings"></div>
+              <div class="avatar-rings-outer"></div>
+              <div class="avatar-img-box">
+                <img src="./assets/images/avatar.jpg" alt="Divyansh Developer Avatar" class="avatar-img" />
+              </div>
+              <div class="avatar-status-badge">
+                <span class="status-beacon"></span>
+                <span>VIDI-VICI // ONLINE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SKILLS MATRIX & CODE RUNNER PLAYGROUND
+         ========================================================================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="cpu"></i> Technical Capabilities
+          </div>
+          <h2 class="section-title">Engineered <span class="gradient-text">Skills Matrix</span></h2>
+          <p class="section-desc">
+            Proficiencies across Java, Python, JavaScript, SQL, FastAPI, REST APIs, HTML5, CSS3, and Git & GitHub.
+          </p>
+        </div>
+
+        <div class="skills-grid" id="skills-categories-grid">
+          <!-- Populated dynamically via main.js -->
+        </div>
+
+        <!-- Live Code Sandbox Tab -->
+        <div class="code-runner-panel">
+          <div style="display: flex; align-items: center; justify-content: space-between; background: #060b18; padding: 12px 24px; border-bottom: 1px solid var(--border-subtle);">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="badge badge-purple">LIVE CODE PLAYGROUND</span>
+              <span id="code-lang-tag" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan);">Python / FastAPI</span>
+            </div>
+            <button class="btn btn-primary" id="code-run-btn" style="padding: 6px 14px; font-size: 0.75rem;">
+              <i data-lucide="play"></i> Execute Code
+            </button>
+          </div>
+
+          <div class="code-runner-nav" id="code-tabs-nav">
+            <!-- Tabs dynamically rendered -->
+          </div>
+
+          <div class="code-editor-body" id="code-display-body">
+            <!-- Code snippet displayed here -->
+          </div>
+
+          <div style="background: #020409; padding: 14px 20px; border-top: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.8rem;" id="code-exec-output">
+            <span style="color: var(--neon-green)">// Executable loaded: Ready to compile and run.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         QUANTUM CONTACT UPLINK SECTION
+         ========================================================================= -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="radio"></i> Communication Node
+          </div>
+          <h2 class="section-title">Quantum <span class="gradient-text">Contact Uplink</span></h2>
+          <p class="section-desc">
+            Have an internship opening or technical inquiry? Dispatch communication directly to Divyansh.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <a href="mailto:divyanshkumar458@gmail.com" class="contact-direct-card">
+              <div class="brand-icon-box">
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">DIRECT DISPATCH</div>
+                <div style="font-weight: 600; color: var(--text-bright);">divyanshkumar458@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/divyanshuwu" target="_blank" class="contact-direct-card">
+              <div class="brand-icon-box">
+                <i data-lucide="github"></i>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">CODE REGISTRY</div>
+                <div style="font-weight: 600; color: var(--text-bright);">github.com/divyanshuwu</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/divyansh-divyansh-48823b331" target="_blank" class="contact-direct-card">
+              <div class="brand-icon-box">
+                <i data-lucide="linkedin"></i>
+              </div>
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">PROFESSIONAL NETWORK</div>
+                <div style="font-weight: 600; color: var(--text-bright);">linkedin.com/in/divyansh-divyansh</div>
+              </div>
+            </a>
+
+            <div class="cyber-panel" style="padding: 24px;">
+              <h4 style="font-family: var(--font-display); font-size: 1.05rem; color: var(--text-bright); margin-bottom: 8px;">Internship Availability</h4>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+                Currently seeking <strong>Software Engineering / Backend Internships</strong>. Ready to contribute across Java, Python, SQL, and Web stacks.
+              </p>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="badge badge-cyan">Java Backend</span>
+                <span class="badge badge-purple">FastAPI / Python</span>
+                <span class="badge badge-green">SQL / Relational DB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form id="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">OPERATIVE / RECRUITER NAME</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Recruiter Name" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">RETURN FREQUENCY (EMAIL)</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="recruiter@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">PURPOSE / OPPORTUNITY</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Software Engineering Internship" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">TRANSMISSION PAYLOAD</label>
+                <textarea id="contact-message" class="form-control" rows="4" placeholder="Enter message specifications..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;">
+                <i data-lucide="send"></i> Transmit Uplink
+              </button>
+
+              <div id="form-status-msg" style="margin-top: 16px; font-family: var(--font-mono); font-size: 0.82rem; min-height: 24px;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FUTURISTIC FOOTER & TELEMETRY
+         ========================================================================= -->
+    <footer class="hud-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="brand-icon-box">
+              <i data-lucide="shield"></i>
+            </div>
+            <div>
+              <div style="font-family: var(--font-display); font-weight: 700; color: var(--text-bright);">DIVYANSH // PORTFOLIO</div>
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--neon-cyan);">B.Tech IT 3rd Year • Class of 2028</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 24px; font-family: var(--font-mono); font-size: 0.8rem;">
+            <a href="#hero" style="color: var(--text-muted); text-decoration: none;">Core</a>
+            <a href="#skills" style="color: var(--text-muted); text-decoration: none;">Skills Matrix</a>
+            <a href="#contact" style="color: var(--text-muted); text-decoration: none;">Uplink</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-telemetry">
+          <div>NEXUS-OS v4.2.0 • ALL SYSTEMS NORMAL • GITHUB: @divyanshuwu</div>
+          <div>ENCRYPTED WITH SHA-256 • &copy; 2026 DIVYANSH</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- =========================================================================
+       NEXUS-AI CONVERSATIONAL ASSISTANT DRAWER
+       ========================================================================= -->
+  <button class="ai-launcher-btn" id="ai-launcher" aria-label="Open AI Assistant">
+    <i data-lucide="bot"></i>
+    <span>NEXUS-AI</span>
+    <span class="status-beacon"></span>
+  </button>
+
+  <div class="ai-chat-drawer" id="ai-drawer">
+    <div class="ai-drawer-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <i data-lucide="bot" style="color: var(--neon-cyan);"></i>
+        <div>
+          <div style="font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--text-bright);">NEXUS-AI ASSISTANT</div>
+          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--neon-green);">NEURAL LINK ACTIVE // DIVYANSH</div>
+        </div>
+      </div>
+      <button id="ai-drawer-close" style="background: transparent; border: none; color: var(--text-muted); cursor: pointer;">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="ai-messages-container" id="ai-messages">
+      <!-- Chat bubbles -->
+    </div>
+
+    <div class="ai-quick-chips" id="ai-quick-chips">
+      <!-- Quick chips -->
+    </div>
+
+    <form class="ai-input-form" id="ai-form">
+      <input type="text" id="ai-input" class="ai-input-field" placeholder="Ask about Divyansh's skills, CGPA, GitHub..." />
+      <button type="submit" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.8rem;">
+        <i data-lucide="send"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Core Scripts -->
+  <script src="./js/config.js"></script>
+  <script src="./js/particles.js"></script>
+  <script src="./js/audio.js"></script>
+  <script src="./js/ai-assistant.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
